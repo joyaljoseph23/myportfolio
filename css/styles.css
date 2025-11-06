@@ -8,6 +8,17 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: #242424;
   color: white;
+  --black: #0A0A0A;
+  --dark-red: #4B0B0B;
+  --accent-red: #B11226;
+  --silver: #C0C0C0;
+  --gray: #888;
+  --white: #fff;
+}
+#about {
+  background-color: var(--dark-red);
+  color: var(--white);
+  border-top: 2px solid var(--silver);
 }
 
 /* Navbar */
@@ -127,7 +138,9 @@ ul li a:hover {
   background-color: #ed1d24;
   transform: scale(1.1);
 }
-
+.herobutton{
+  margin-top: 10px;
+}
 hr {
   border: none;
   height: 3px;
