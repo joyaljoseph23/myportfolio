@@ -1,209 +1,205 @@
-*{
+* {
   margin: 0;
   padding: 0;
-}
-
-#root {
-
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.herotitle{
-  margin-right:15% ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    
-}
-
-navbar{
-    position: fixed;
-}
-
-nav-brand a{
-    text-decoration: none;
-}
-nav-brand{
-   
-   
-    text-align: center;
-    display: flex; /* important */
-    width: 100px;
-    height: 60px;
-   
-    border-radius: 5px;
-    overflow: hidden; 
-}
-.firstpart{
-    flex: 1;
-    background-color: black !important;
-}
-.secondpart{
-    flex: 1;
-    background-color: #9B1B1B;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-li{
-    list-style: none;
-    padding: 1rem;
-
-}
-li a{
-    color: white;
-    text-decoration: none;
-}
-li a:hover{
-   
-    color:white ;
-}
-#brandname{
-   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  margin: 0;
-  font-weight: bold;
-  
-  transition: transform 0.3s ease, font-size 0.3s ease;
-}
-#brandname a{
-    color: white;
-    
-}
-#brandname a:hover{
-    color: white;
-    transform: translate(-50%, -50%) scale(1.3);
-}
-
-
-
-
-
-.titleimage {
-  width: 260px !important;
-  transition: filter 0.5s ease;
-}
-
-
-.getmebtn,.getmebtn a{
-    background-color: #9B1B1B;
-    color: black;
-    margin: 5px;
-    border-color: none;
-    border:none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-
-  
-    cursor: pointer;
-    transition: transform 0.5s ease, background-color 0.3s ease;
-
-
-}
-.getmebtn:hover {
-  transform: scale(1.1);       
-  background-color: #ED1D24;  
-}
-
-.viewprojectbtn,.viewprojectbtn a{
-     background-color: #9B1B1B;
-    color: black;
-    margin: 5px;
-    border-color: none;
-    border:none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-
-  
-    cursor: pointer;
-    transition: transform 0.5s ease, background-color 0.3s ease;
-
-}
-.viewprojectbtn:hover {
-  transform: scale(1.1);       
-  background-color: #ED1D24;  
-  margin-left: 5px;
-}
-hr{
-    color: #ED1D24;  ;
-}
-#contact{
-    background-color: #FFC50F;
-}
-.section {
-  height: 100vh; /* full screen height */
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 36px;
+  box-sizing: border-box;
 }
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
-hr{
-    border: none; /* Remove default border */
-    height: 3px; /* Set the thickness of the line */
-    
-    margin: 1em 0;
-    color: #9B1B1B;
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #242424;
+  padding: 0.5rem 1rem;
+  z-index: 100;
 }
-#about{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   gap: 1em;
-   padding: 30px;
-   margin: 30px;
-   
+.nav-brand {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.describe{
+
+/* Two halves */
+.firstpart,
+.secondpart {
+  flex: 1;
+}
+
+.firstpart {
+  background-color: black;
+}
+
+.secondpart {
+  background-color: #9B1B1B;
+}
+
+/* Center the letter */
+#brandname {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#brandname a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+#brandname a:hover {
+  transform: scale(1.3);
+}
 
 
-
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
-.techstack{
-    background-color:#242424;
-    /* flex-grow: 1; */
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color:#9b1b1b;
+}
+
+/* Hero Section */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.herotitle {
+  max-width: 500px;
+  margin: 5%;
+}
+
+.titleimage {
+  width: 260px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.titleimage:hover {
+  transform: scale(1.05);
+}
+
+.getmebtn,
+.viewprojectbtn {
+  background-color: #9b1b1b;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.getmebtn:hover,
+.viewprojectbtn:hover {
+  background-color: #ed1d24;
+  transform: scale(1.1);
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #9b1b1b;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.describe,
+.techstack {
+  flex: 1 1 300px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+ #txt{
+    text-decoration: none;
+    color: #000;
+  }
+
+/* 📱 Media Queries */
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .titleimage {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .getmebtn,
+  .viewprojectbtn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  #txt{
+    text-decoration: none;
+    color: #000;
+  }
+
+  #about {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
